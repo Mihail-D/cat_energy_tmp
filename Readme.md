@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Михаил Дорошенко](https://up.htmlacademy.ru/adaptive/17/user/559237).
-* Наставник: `без наставника`.
+* Наставник: `Без наставника`.
 
 ---
 
