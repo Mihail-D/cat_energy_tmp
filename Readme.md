@@ -16,7 +16,6 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`,
 
 ---
 
-
 ### Памятка
 
 #### 1. Зарегистрируйтесь на Гитхабе
