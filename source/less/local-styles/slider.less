@@ -1,0 +1,390 @@
+.slider__images-container {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+  height: 240px;
+  margin-bottom: 23px;
+
+  overflow: hidden;
+}
+
+.slider__img-container {
+  position: relative;
+  width: 320px;
+  height: 240px;
+
+  overflow: hidden;
+
+  &--before {
+    width: 320px;
+  }
+
+  &--after {
+    width: 0;
+  }
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+
+  max-width: none;
+  width: 320px;
+  object-fit: cover;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
+  }
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+
+.slider__btn {
+  flex-shrink: 0;
+  padding: 6px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &--before {
+    margin-right: 18px;
+    margin-left: 34px;
+    text-align: right;
+  }
+
+  &--after {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    color: fade(@color-title, 50%);
+  }
+
+  &:active {
+    color: fade(@color-title, 30%);
+  }
+}
+
+.slider__range {
+  width: 82px;
+
+  appearance: none;
+  background-color: transparent;
+
+  // Стили для слайдера в Firefox
+  &::-moz-range-track {
+    width: 72px;
+    height: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background-color: @color-background-main;
+    border: 1px solid @color-border-main;
+    border-radius: 5px;
+  }
+
+  &::-moz-range-thumb {
+    width: 50%;
+    height: 6px;
+
+    background: @color-highlight;
+    border-radius: 3px;
+    border: none;
+
+    appearance: none;
+    cursor: pointer;
+  }
+
+  // Стили для слайдера в Chrome
+  &::-webkit-slider-runnable-track {
+    min-width: 84px;
+    height: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background-color: @color-background-main;
+    border: 1px solid @color-border-main;
+    border-radius: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 50%;
+    height: 6px;
+    margin-top: 3px;
+
+    background: @color-highlight;
+    border-radius: 3px;
+
+    appearance: none;
+    cursor: pointer;
+  }
+
+  // Стили для слайдера в IE
+  &::-ms-track {
+    flex-grow: 1;
+    margin-top: 15px;
+    min-width: 82px;
+    height: 12px;
+
+    color: @color-background-main;
+
+    background-color: @color-background-main;
+    border-radius: 5px;
+    border: 1px solid @color-border-main;
+
+    cursor: pointer;
+  }
+
+  &::-ms-fill-lower {
+    background: @color-background-main;
+    border-radius: 5px;
+  }
+
+  &::-ms-fill-upper {
+    background: @color-background-main;
+    border-radius: 5px;
+  }
+
+  &::-ms-thumb {
+    height: 6px;
+    width: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 3px;
+    background: @color-highlight;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__images-container {
+    width: 690px;
+    height: 517px;
+    margin: 0;
+    margin-bottom: 13px;
+  }
+
+  .slider__img-container {
+    height: 517px;
+
+    &--before {
+      width: 340px;
+    }
+
+    &--after {
+      width: 350px;
+    }
+  }
+
+  .slider__img {
+    width: 690px;
+  }
+
+  .slider__controls {
+    width: 675px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    padding-left: 0;
+  }
+
+  .slider__btn {
+    position: relative;
+
+    font-size: 20px;
+
+    border-bottom: 1px dotted @color-border-hover;
+
+    &:hover,
+    &:focus {
+      color: @color-title;
+
+      border-bottom: 1px solid @color-border-hover;
+    }
+
+    &:active {
+      color: @color-title;
+
+      border-color: transparent;
+    }
+
+    &--before {
+      margin-right: 24px;
+      margin-left: 47px;
+    }
+  }
+
+  .slider__range {
+    min-width: 428px;
+
+    // Стили для слайдера в Firefox
+    &::-moz-range-track {
+      min-width: 428px;
+      height: 6px;
+      padding-left: 0;
+      padding-right: 0;
+
+      background-color: @color-slider-range;
+      border: none;
+      border-radius: 2.5px;
+    }
+
+    &::-moz-range-thumb {
+      width: 8px;
+      height: 8px;
+
+      background-color: @color-highlight;
+      border-radius: 50%;
+      border: solid 12px @color-background-main;
+      box-shadow: 0 0 0 1px @color-border-main, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 1px @color-border-main, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-highlight, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    // Стили для слайдера в Chrome
+    &::-webkit-slider-runnable-track {
+      min-width: 428px;
+      height: 6px;
+      padding-left: 0;
+      padding-right: 0;
+
+      background: @color-slider-range;
+      border: none;
+      border-radius: 2.5px;
+    }
+
+    &::-webkit-slider-thumb {
+      width: 32px;
+      height: 32px;
+      margin-top: -14px;
+
+      background-color: @color-highlight;
+      border-radius: 50%;
+      border: solid 12px @color-background-main;
+      box-shadow: 0 0 0 1px @color-border-main, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 1px @color-border-main, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-highlight, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    // Стили для слайдера в IE
+    &::-ms-track {
+      min-width: 428px;
+      height: 6px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      padding-left: 0;
+      padding-right: 0;
+
+      color: @color-slider-range;
+
+      background-color: @color-slider-range;
+      border: none;
+      border-radius: 2.5px;
+    }
+
+    &::-ms-fill-lower {
+      background-color: @color-slider-range;
+      border: none;
+      border-radius: 2.5px;
+    }
+
+    &::-ms-fill-upper {
+      background-color: @color-slider-range;
+      border: none;
+      border-radius: 2.5px;
+    }
+
+    &::-ms-thumb {
+      width: 8px;
+      height: 8px;
+      margin-top: 0;
+
+      background-color: @color-highlight;
+      border-radius: 50%;
+      border: solid 13px @color-background-main;
+      box-shadow: 0 0 0 1px @color-border-main, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 1px @color-border-main, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px @color-highlight, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__images-container {
+    margin-right: -75px;
+    margin-bottom: 33px;
+    margin-left: 0;
+  }
+
+  .slider__controls {
+    justify-content: space-between;
+    width: 580px;
+    margin-bottom: 33px;
+    margin-right: 40px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .slider__btn {
+    &--before {
+      margin-left: 9px;
+    }
+
+    &--after {
+      padding-right: 0;
+    }
+  }
+
+  .slider__img-container {
+    &--before {
+      width: 365px;
+    }
+
+    &--after {
+      width: 325px;
+    }
+  }
+}

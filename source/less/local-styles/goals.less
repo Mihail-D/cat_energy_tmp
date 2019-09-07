@@ -1,0 +1,30 @@
+.goals__item {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goals__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goals {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .goals__item {
+    box-sizing: border-box;
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
