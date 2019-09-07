@@ -8,10 +8,10 @@
     <link rel="preload" href="fonts/oswaldmedium.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <link rel="stylesheet" href="css/style.css" />
     <script>
-      document.createElement( "picture" );
+      document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
     <script src="js/svg4everybody.js"></script>
@@ -73,11 +73,19 @@
                     name="first-name"
                     type="text"
                     placeholder="Барсик"
+                    required
                   />
                 </li>
                 <li class="form__input-wrapper">
                   <label class="form__label form__label--text" for="weight">Вес (кг):*</label>
-                  <input class="form__input form__input--text" id="weight" name="weight" type="text" placeholder="7" />
+                  <input
+                    class="form__input form__input--text"
+                    id="weight"
+                    name="weight"
+                    type="text"
+                    placeholder="7"
+                    required
+                  />
                 </li>
                 <li class="form__input-wrapper">
                   <label class="form__label form__label--text" for="age">Возраст (лет):</label>
@@ -134,6 +142,7 @@
                   name="email"
                   type="email"
                   placeholder="kuklachev@gmail.com"
+                  required
                 />
               </li>
               <li class="form__input-wrapper form__list form__list--column">
@@ -144,6 +153,7 @@
                   name="phone"
                   type="tel"
                   placeholder="8 (960) 900-60-90"
+                  required
                 />
               </li>
             </ul>
@@ -267,13 +277,7 @@
 
       <div class="page-footer__info page-container">
         <a class="page-footer__logo" href="index.html">
-          <img
-            class="page-footer__logo-img"
-            src="img/logo-footer.svg"
-            alt="Cat Energy logo"
-            width="128"
-            height="24"
-          />
+          <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat Energy logo" width="128" height="24" />
         </a>
         <ul class="page-footer__social-list">
           <li>
