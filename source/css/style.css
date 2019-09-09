@@ -8,6 +8,7 @@
 html {
   line-height: 1.15;
   /* 1 */
+  -webkit-text-size-adjust: 100%;
 }
 /* Sections
    ========================================================================== */
@@ -71,6 +72,7 @@ a {
 abbr[title] {
   border-bottom: none;
   /* 1 */
+  text-decoration: underline;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   /* 2 */
@@ -169,6 +171,13 @@ select {
 button,
 [type="button"],
 [type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -248,17 +257,27 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
   outline-offset: -2px;
   /* 2 */
 }
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+
   font: inherit;
   /* 2 */
 }
@@ -2871,6 +2890,7 @@ use.page-footer__social-img--fb-mobile {
 .form__input--email.form__input--error {
   background-image: url("../img/icon-mail-error.svg");
 }
+
 .form__input-phone-phone {
   background-image: url("../img/icon-phone.svg");
   background-size: 21px 21px;
@@ -2880,6 +2900,7 @@ use.page-footer__social-img--fb-mobile {
   background-image: url("../img/icon-phone-active.svg");
 }
 .form__input-phone-phone.form__input--error {
+
   background-image: url("../img/icon-phone-error.svg");
 }
 .form__input:hover + .form__label--icon::before {
@@ -2944,12 +2965,14 @@ use.page-footer__social-img--fb-mobile {
     font-size: 20px;
     line-height: 20px;
   }
+
   .form__input--phone {
     margin-top: -50px;
   }
   .form__label--text[for="phone"] {
     margin-top: -50px;
   }
+
   .form__title {
     max-width: none;
     margin-bottom: 68px;
@@ -2997,7 +3020,9 @@ use.page-footer__social-img--fb-mobile {
     margin-top: -20px;
   }
   .form__list--column {
+
     margin-bottom: 72px;
+
   }
   .form__input {
     min-height: 50px;
