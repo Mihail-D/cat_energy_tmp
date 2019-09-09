@@ -2947,7 +2947,7 @@ use.page-footer__social-img--fb-mobile {
   .form__input--phone {
     margin-top: -50px;
   }
-  .form__label--text[for='phone'] {
+  .form__label--text[for="phone"] {
     margin-top: -50px;
   }
   .form__title {
