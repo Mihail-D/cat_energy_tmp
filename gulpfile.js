@@ -72,14 +72,14 @@ gulp.task("clean", function () {
 
 gulp.task("sprite", function () {
   return gulp.src([
-    "build/img/htmlacademy.svg",
-    "build/img/icon-fb.svg",
-    "build/img/icon-insta.svg",
-    "build/img/icon-vk.svg"
+    "source/img/htmlacademy.svg",
+    "source/img/icon-fb.svg",
+    "source/img/icon-insta.svg",
+    "source/img/icon-vk.svg"
   ])
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("optim", function () {
